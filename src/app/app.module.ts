@@ -9,6 +9,10 @@ import { OrderHistoryComponent } from './pages/order-history/order-history.compo
 import { WishListComponent } from './pages/wish-list/wish-list.component';
 import { ProductComponent } from './components/product/product.component';
 import { AccountComponent } from './components/account/account.component';
+import { Page404Component } from './pages/page404/page404.component';
+import { roteamento } from './routing';
+import { AccountModule } from './components/account/account.module';
+import { ProductModule } from './components/product/product.module';
 
 
 @NgModule({
@@ -18,11 +22,13 @@ import { AccountComponent } from './components/account/account.component';
     AdressListComponent,
     OrderHistoryComponent,
     WishListComponent,
-    ProductComponent,
-    AccountComponent
+    Page404Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    roteamento,
+    AccountModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
