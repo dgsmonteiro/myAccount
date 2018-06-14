@@ -7,12 +7,12 @@ import { ProfileInformationsComponent } from './pages/profile-informations/profi
 import { AdressListComponent } from './pages/adress-list/adress-list.component';
 import { OrderHistoryComponent } from './pages/order-history/order-history.component';
 import { WishListComponent } from './pages/wish-list/wish-list.component';
-import { ProductComponent } from './components/product/product.component';
-import { AccountComponent } from './components/account/account.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { roteamento } from './routing';
 import { AccountModule } from './components/account/account.module';
 import { ProductModule } from './components/product/product.module';
+
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -28,7 +28,10 @@ import { ProductModule } from './components/product/product.module';
     BrowserModule,
     roteamento,
     AccountModule,
-    ProductModule
+    ProductModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDfPbNnfE5ktwmYBMuI_S7jH04khiAQomM'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

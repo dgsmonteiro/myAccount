@@ -16,9 +16,9 @@
     </div>
   </div>
 </header>
-<div class="mt-5">
+<div class="mt-2">
     <div class="row">
-      <div class="col-5 ml-auto mr-auto card" *ngFor="let produto of account.orders | filtraPorNome: inputDaBusca.value">
+      <div class="col-5 ml-auto mr-auto card mt-3" *ngFor="let produto of account.orders | filtraPorNome: inputDaBusca.value">
         <img class="card-img-top" [src]="produto.images[0]" alt="avatar">
         <div class="card-body">
           <h5 class="card-title">{{produto.name}}</h5>
