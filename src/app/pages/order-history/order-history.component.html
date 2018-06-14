@@ -10,12 +10,15 @@
       <a [routerLink]="['/wish-list']" class="col-2 navbar-brand d-flex align-items-center">
         <strong>Wishlist</strong>
       </a>
+      <form class="form-inline">
+        <input #inputDaBusca (input)="0" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+      </form>
     </div>
   </div>
 </header>
 <div class="mt-5">
     <div class="row">
-      <div class="col-4 ml-auto mr-auto card" *ngFor="let produto of account.orders">
+      <div class="col-5 ml-auto mr-auto card" *ngFor="let produto of account.orders | filtraPorNome: inputDaBusca.value">
         <img class="card-img-top" [src]="produto.images[0]" alt="avatar">
         <div class="card-body">
           <h5 class="card-title">{{produto.name}}</h5>
