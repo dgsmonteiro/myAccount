@@ -13,3 +13,14 @@
     </div>
   </div>
 </header>
+
+<div class="row mt-5">
+  <div class="ml-auto mr-auto col-4">
+    <div class="list-group">
+      <a [ngClass]="{'active': enderecoAtivo === address.nome}" class="list-group-item list-group-item-action list-group-item-dark" *ngFor="let address of account.address" (click)="exibeEndereco(address)">{{address.nome}}</a>
+    </div>
+  </div>
+  <div class="ml-auto mr-auto col-6">
+    <h5>{{endereco}}</h5>
+  </div>
+</div>

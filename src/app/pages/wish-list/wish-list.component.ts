@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountComponent } from '../../components/account/account.component';
 
 @Component({
   selector: 'app-wish-list',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishListComponent implements OnInit {
 
-  constructor() { }
+  account : AccountComponent;
+
+
+  constructor() { 
+    this.account = new AccountComponent();
+  }
 
   ngOnInit() {
   }

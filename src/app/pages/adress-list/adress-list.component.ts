@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountComponent } from '../../components/account/account.component';
 
 @Component({
   selector: 'app-adress-list',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdressListComponent implements OnInit {
 
-  constructor() { }
+  account : AccountComponent;
+  enderecoAtivo : string = null;
+  endereco : string = null;
+
+  constructor() {
+    this.account = new AccountComponent();
+   }
+
+   exibeEndereco(endereco) {
+     this.enderecoAtivo = endereco.nome;
+     this.endereco = endereco.endereco;
+   }
 
   ngOnInit() {
   }
